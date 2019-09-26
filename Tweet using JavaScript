@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
 
+
+<style>
+body {
+	height: 600px;
+	background-color: #99ffff;
+	background-image: linear-gradient(#80ffff, #1a66ff);
+}
+
+button {
+	background-color: #ccccb3;
+	font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+	<center>
+		Write Your Tweet Here<br>
+		<br>
+		<textarea id="my-tweet"></textarea>
+		<br>
+		<br>
+		<button onclick="tweetTweet()">Tweet</button>
+	</center>
+</body>
+
+<script>
+	function tweetTweet() {
+
+		var url = "https://twitter.com/intent/tweet";
+		var text = document.getElementById("my-tweet").value;
+		var hashtag = "hi hello";
+		var via = "userName";
+		window.open(url + "?text=" + text + ";hashtags=" + hashtag + ";via="
+				+ via, "", "width=500,height=300");
+	}
+</script>
+</html>
